@@ -44,7 +44,7 @@ jobs:
 
     build-db:
     needs: build-app
-    runs-on: window-latest
+    runs-on: windows-latest
     Steps:
     - run: echo "Hello Window" 
     
