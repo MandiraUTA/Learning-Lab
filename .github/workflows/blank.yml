@@ -42,19 +42,19 @@ jobs:
       - name: Build API
         run: echo "Building API" 
 
-
-    build-db:
-    needs: build-app
+  build-db:
+    needs: build-api
     runs-on: windows-latest
-    Steps:
-    - run: echo "Hello Window" 
-    
+    steps:
+      - name: Build Database
+        run: echo "Hello Windows" 
 
   packaging:
-  needs: [build, build-api-app]
-  runs-on: macos-latest
-  Steps:
-  - run: echo "Hello MacOS"
+    needs: [build, build-api]
+    runs-on: macos-latest
+    steps:
+      - name: Packaging
+        run: echo "Hello macOS"
 
 
 
