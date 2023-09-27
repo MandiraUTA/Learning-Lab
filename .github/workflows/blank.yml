@@ -37,9 +37,10 @@ jobs:
           echo test, and deploy your project.
 
   build-api:
-    runs-on: window-latest
-    Steps:
-    - run: echo "building API" 
+    runs-on: windows-latest
+    steps:
+      - name: Build API
+        run: echo "Building API" 
 
 
     build-db:
